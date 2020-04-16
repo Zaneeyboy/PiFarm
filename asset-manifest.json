@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.df027caf.chunk.js",
-    "main.js.map": "/static/js/main.df027caf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.dda26511.js",
-    "runtime-main.js.map": "/static/js/runtime-main.dda26511.js.map",
-    "static/js/2.143810b9.chunk.js": "/static/js/2.143810b9.chunk.js",
-    "static/js/2.143810b9.chunk.js.map": "/static/js/2.143810b9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.b2363a03375a00f95afff610a1edd328.js": "/precache-manifest.b2363a03375a00f95afff610a1edd328.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.143810b9.chunk.js.LICENSE.txt": "/static/js/2.143810b9.chunk.js.LICENSE.txt"
+    "main.js": "/PiFarm/static/js/main.d8f75d7c.chunk.js",
+    "main.js.map": "/PiFarm/static/js/main.d8f75d7c.chunk.js.map",
+    "runtime-main.js": "/PiFarm/static/js/runtime-main.382962dd.js",
+    "runtime-main.js.map": "/PiFarm/static/js/runtime-main.382962dd.js.map",
+    "static/js/2.143810b9.chunk.js": "/PiFarm/static/js/2.143810b9.chunk.js",
+    "static/js/2.143810b9.chunk.js.map": "/PiFarm/static/js/2.143810b9.chunk.js.map",
+    "index.html": "/PiFarm/index.html",
+    "precache-manifest.877a13844e598fcb57a8a44c5c19efc9.js": "/PiFarm/precache-manifest.877a13844e598fcb57a8a44c5c19efc9.js",
+    "service-worker.js": "/PiFarm/service-worker.js",
+    "static/js/2.143810b9.chunk.js.LICENSE.txt": "/PiFarm/static/js/2.143810b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.dda26511.js",
+    "static/js/runtime-main.382962dd.js",
     "static/js/2.143810b9.chunk.js",
-    "static/js/main.df027caf.chunk.js"
+    "static/js/main.d8f75d7c.chunk.js"
   ]
 }
