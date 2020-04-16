@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/PiFarm/static/css/main.d1b05096.chunk.css",
-    "main.js": "/PiFarm/static/js/main.21dda9c4.chunk.js",
-    "main.js.map": "/PiFarm/static/js/main.21dda9c4.chunk.js.map",
+    "main.js": "/PiFarm/static/js/main.d8f75d7c.chunk.js",
+    "main.js.map": "/PiFarm/static/js/main.d8f75d7c.chunk.js.map",
     "runtime-main.js": "/PiFarm/static/js/runtime-main.382962dd.js",
     "runtime-main.js.map": "/PiFarm/static/js/runtime-main.382962dd.js.map",
-    "static/js/2.ac68bf2d.chunk.js": "/PiFarm/static/js/2.ac68bf2d.chunk.js",
-    "static/js/2.ac68bf2d.chunk.js.map": "/PiFarm/static/js/2.ac68bf2d.chunk.js.map",
+    "static/js/2.143810b9.chunk.js": "/PiFarm/static/js/2.143810b9.chunk.js",
+    "static/js/2.143810b9.chunk.js.map": "/PiFarm/static/js/2.143810b9.chunk.js.map",
     "index.html": "/PiFarm/index.html",
-    "precache-manifest.d64049f278d3e48486ace162c60af6f1.js": "/PiFarm/precache-manifest.d64049f278d3e48486ace162c60af6f1.js",
+    "precache-manifest.877a13844e598fcb57a8a44c5c19efc9.js": "/PiFarm/precache-manifest.877a13844e598fcb57a8a44c5c19efc9.js",
     "service-worker.js": "/PiFarm/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/PiFarm/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.ac68bf2d.chunk.js.LICENSE.txt": "/PiFarm/static/js/2.ac68bf2d.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/PiFarm/static/media/logo.5d5d9eef.svg"
+    "static/js/2.143810b9.chunk.js.LICENSE.txt": "/PiFarm/static/js/2.143810b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.382962dd.js",
-    "static/js/2.ac68bf2d.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.21dda9c4.chunk.js"
+    "static/js/2.143810b9.chunk.js",
+    "static/js/main.d8f75d7c.chunk.js"
   ]
 }
