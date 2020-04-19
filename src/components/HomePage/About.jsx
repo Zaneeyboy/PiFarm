@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const About = () => {
     return ( 
         <section id = "about" >
@@ -13,6 +14,7 @@ const About = () => {
             for you.With PiFarm, you maintain control of your system by monitoring the factors affecting your system as needed. 
             </p>
         </section>
+       
     );
 };
 

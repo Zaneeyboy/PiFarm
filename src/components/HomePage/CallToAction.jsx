@@ -2,6 +2,7 @@ import React from "react";
 import { MdContactMail } from "react-icons/md";
 import { FiPhoneOutgoing } from "react-icons/fi";
 
+
 export default function CallToAction() {
   return (
     <div>
