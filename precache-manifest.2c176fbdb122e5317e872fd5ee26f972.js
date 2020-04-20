@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "01e88bdfc9c1df4213b2d2f18c802b6b",
+    "revision": "df46281e56af98f9ee60d17f6e4ea429",
     "url": "/PiFarm/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PiFarm/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "5f307cb4e6246876fdeb",
-    "url": "/PiFarm/static/css/main.527eadb8.chunk.css"
+    "revision": "3c5b40873476464f54ee",
+    "url": "/PiFarm/static/css/main.e4ee1bb8.chunk.css"
   },
   {
     "revision": "929eb69117d8929cc59e",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PiFarm/static/js/2.ab034219.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f307cb4e6246876fdeb",
+    "revision": "3c5b40873476464f54ee",
     "url": "/PiFarm/static/js/main.fc7ee161.chunk.js"
   },
   {

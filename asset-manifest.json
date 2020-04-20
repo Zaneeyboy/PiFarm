@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PiFarm/static/css/main.527eadb8.chunk.css",
+    "main.css": "/PiFarm/static/css/main.e4ee1bb8.chunk.css",
     "main.js": "/PiFarm/static/js/main.fc7ee161.chunk.js",
     "main.js.map": "/PiFarm/static/js/main.fc7ee161.chunk.js.map",
     "runtime-main.js": "/PiFarm/static/js/runtime-main.382962dd.js",
@@ -9,10 +9,10 @@
     "static/js/2.ab034219.chunk.js": "/PiFarm/static/js/2.ab034219.chunk.js",
     "static/js/2.ab034219.chunk.js.map": "/PiFarm/static/js/2.ab034219.chunk.js.map",
     "index.html": "/PiFarm/index.html",
-    "precache-manifest.ad9e7402c8b198bc4fde60d20e1b3731.js": "/PiFarm/precache-manifest.ad9e7402c8b198bc4fde60d20e1b3731.js",
+    "precache-manifest.2c176fbdb122e5317e872fd5ee26f972.js": "/PiFarm/precache-manifest.2c176fbdb122e5317e872fd5ee26f972.js",
     "service-worker.js": "/PiFarm/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/PiFarm/static/css/2.69121389.chunk.css.map",
-    "static/css/main.527eadb8.chunk.css.map": "/PiFarm/static/css/main.527eadb8.chunk.css.map",
+    "static/css/main.e4ee1bb8.chunk.css.map": "/PiFarm/static/css/main.e4ee1bb8.chunk.css.map",
     "static/js/2.ab034219.chunk.js.LICENSE.txt": "/PiFarm/static/js/2.ab034219.chunk.js.LICENSE.txt",
     "static/media/Pifarm (1).png": "/PiFarm/static/media/Pifarm (1).4763a340.png",
     "static/media/Pifarm (2).png": "/PiFarm/static/media/Pifarm (2).efe04dd6.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.382962dd.js",
     "static/css/2.69121389.chunk.css",
     "static/js/2.ab034219.chunk.js",
-    "static/css/main.527eadb8.chunk.css",
+    "static/css/main.e4ee1bb8.chunk.css",
     "static/js/main.fc7ee161.chunk.js"
   ]
 }
