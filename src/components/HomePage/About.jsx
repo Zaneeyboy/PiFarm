@@ -1,20 +1,38 @@
 import React from "react";
-
+import PiFarmLogo from "../../images/Pifarm.png";
 
 const About = () => {
-    return ( 
-        <section id = "about" >
-            <h2>About PiFarm</h2>
-            <p>
-            PiFarm is a web application built off of Reactjs and Firebase which allows it 's users to monitor and manage their hydroponic farm from their
-            phone.It is coupled to Raspberry Pi and Arduino Uno components which in
-            turn are coupled to various sensors which detect and send data to the PiFarm application in real time.PiFarm brings efficiency and management of your smart farm to a whole new level through it 's ability to connect
-            with your system even when on the go without the need
-            for costly equipment or hiring people to look after your farm
-            for you.With PiFarm, you maintain control of your system by monitoring the factors affecting your system as needed. 
+
+    
+    return (
+      <section id="about" className="container-fluid">
+        <div className="row">
+          <div className="col-md-6">
+            <h1 className="project-title">
+              PiFarm - Revolutionizing Agriculture
+            </h1>
+            <p className="lead">
+              Automate your hydroponic farm with PiFarm, the first web
+              application built to connect with your hydroponic system in real
+              time
             </p>
-        </section>
-       
+            <p className="lead">
+              PiFarm is a web application built on React Js, Firebase and
+              Bootstrap. It couples Arduino Uno and Raspberry Pi sensor
+              components to deliver real time information on the status of
+              hydroponic farms to its users.
+            </p>
+            <p className="lead">
+              Don't be left behind with tradition, join the revolution today!
+            </p>
+            <p className="lead">Powered By</p>
+            <p className="lead"> ReactJs, Firebase, Arduino and Raspberry Pi</p>
+          </div>
+          <div className="col-md-6">
+            <img className="logo" src={PiFarmLogo} alt="Pifarm Logo" />
+          </div>
+        </div>
+      </section>
     );
 };
 

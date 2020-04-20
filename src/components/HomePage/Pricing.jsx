@@ -1,26 +1,35 @@
 import React from "react";
 import PricingCard from "./PricingCard";
-
+import {Container,Row,Col} from "react-bootstrap";
 import PricingInfo from "./PricingInfo";
 
 const Pricing = () => {
   return (
-    <section id="pricing">
-      <h2>PiFarm Packages</h2>
+    <section id="pricing" >
+    <Container className="fluid-container">
+    <h2 className="section-heading">PiFarm Packages</h2>
       <p>Simple and affordable plans to fit your system</p>
-      <div>
+      <Row>
         {PricingInfo.map(item=>{
           return(
-            <PricingCard
+            <Col lg={4}>
+              <PricingCard className="pricing-column"
               key={item.key}
               title={item.title}
               price={item.price}
               features={item.features}
             />
+            </Col>
+            
           )
         })}
-        <p>flames</p>
-      </div>
+      </Row>
+        
+  
+    </Container>
+      
+        
+      
     </section>
   );
 };

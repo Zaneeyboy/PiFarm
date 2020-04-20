@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import ReactModal from "react-modal";
-import {IoMdClose} from "react-icons/io";
+//import {IoMdClose} from "react-icons/io";
 import firebase from "../../config/firebase";
+import {Card,Modal,Container,Row,Col} from "react-bootstrap";
 //using esversion:6
 
 const PricingCard = props => {
@@ -17,7 +17,6 @@ const PricingCard = props => {
         package: ""
     });
 
-    ReactModal.setAppElement("*");
 
     function handleChange(event) {
         const {name,value} = event.target;
@@ -59,52 +58,70 @@ const PricingCard = props => {
 
     return ( 
         <div>
-            <React.Fragment >
-                <div>
-                    <div>
-                        <div>
-                            <h3>{props.title}</h3>
-                        </div> 
-                        <div>
-                            <h2>{props.price}</h2>
+            <React.Fragment>
+                <Card border="dark" md={4}>
+                    <Card.Body>
+                        <Card.Header><h3 className="">{props.title}</h3></Card.Header>
+                        <Card.Title><h2 className="price-text">{props.price}</h2></Card.Title>
+                        <Card.Text className="card-text">
                             {props.features.map(feature => {
-                                return <p key = {feature}>{feature}</p>
+                                return <p key={feature}>{feature}</p>
                             })}
-                            <button onClick = { handleShow }
-                                type = "button" > Sign Up</button>
-                        </div> 
-                    </div>
-                </div>
-                <ReactModal shouldCloseOnOverlayClick = { true} isOpen = {show} contentLabel = "Signup Form" >
-                    <div>
-                        <h2 className = "modal-title" > Signup form for {props.title} Package </h2>
-                        <button onClick = {handleClose}><IoMdClose/></button>
-                    </div>
-                    <div>
-                        <h1>Hello {contact.fName} {contact.lName} </h1> 
-                        <p>{contact.email}</p>
-                        <form onSubmit = {handleSubmit} >
-                            <input onChange = {handleChange}        
-                                name = "fName"
-                                value = {contact.fName}
-                                placeholder = "First Name" />
-                            <input onChange = {handleChange}
-                                name = "lName"
-                                value = {contact.lName}
-                                placeholder = "Last Name" />
-                            <input onChange = {handleChange}
-                                name = "email"
-                                value = {contact.email}
-                                placeholder = "Email" />
-                            <button onClick = {handleSubmit}>Submit Form</button> 
-                        </form> 
-                    </div> 
-                    <div >
-                        <button onClick = {handleClose}>Close</button> 
-                    </div> 
-                </ReactModal> 
+                        </Card.Text>
+                        <button className="btn btn-primary" onClick={handleShow}
+                                type="button">Sign Up</button>
+                    </Card.Body>
+                </Card>
+
+                <Modal contentLabel="Signup Form" show={show} size="lg" onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title> Signup form for the {props.title} Package </Modal.Title>
+                        {/* <button onClick = {handleClose}><IoMdClose/></button> */}
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Container fluid>
+                            <h1>Hello {contact.fName} {contact.lName} </h1> 
+                            <p>{contact.email}</p>
+                            <form onSubmit = {handleSubmit} >
+                                <Row>
+                                    <Col sm={12}>
+                                    <input className="modalInput" onChange = {handleChange}        
+                                    name = "fName"
+                                    value = {contact.fName}
+                                    placeholder = "First Name" />
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col  sm={12}>
+                                    <input className="modalInput" onChange = {handleChange}
+                                    name = "lName"
+                                    value = {contact.lName}
+                                    placeholder = "Last Name" />
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col  sm={12}>
+                                    <input className="modalInput" onChange = {handleChange}
+                                    name = "email"
+                                    value = {contact.email}
+                                    placeholder = "Email" />
+                                    </Col>
+                                </Row>
+                                        <p className="modal-submit-text">Submit this form and we'll be in contact soon with your package</p>
+                                        <button className="btn btn-primary modal-button" onClick = {handleSubmit}>Submit Form</button> 
+
+                                
+                            </form> 
+
+                        </Container>
+                        
+                    </Modal.Body> 
+                    
+                </Modal> 
             </React.Fragment> 
         </div>
     );
 }
 export default PricingCard;
+
+  
