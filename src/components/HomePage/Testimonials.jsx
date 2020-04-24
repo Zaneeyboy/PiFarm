@@ -1,61 +1,95 @@
-import React,{useState} from 'react';
-import {Carousel} from "react-bootstrap";
-import PiFarmLogo from "../../images/Pifarm.png";
-import PiFarmLogo1 from "../../images/Pifarm (1).png";
-import PiFarmLogo2 from "../../images/Pifarm (2).png";
+import React,{useState} from "react";
+import {Container} from "react-bootstrap";
+import testimonials from "./TestimonialData";
+import {css,cx} from "emotion";
 
+const Testimonials=()=>{
 
-export default function Testimonials() {
-    const [index, setIndex] = useState(0);
+  const [current,setCurrent]=useState(testimonials[0]);
+  
+  const [active,setActive]=useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  const handleSetClick=(event)=>{
+    setCurrent(testimonials[event.target.getAttribute("data-testimonial")]);
+    setActive(event.target.getAttribute("data-testimonial"));
+  }
 
   return (
-    //   <Container fluid>
-    //       <Row>
-                 <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          className = "d-block w-responsive text-center mx-auto p-3 mt-2"
-          src={PiFarmLogo}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className = "d-block w-responsive text-center mx-auto p-3 mt-2"
-          src={PiFarmLogo1}
-          alt="Second slide"
-        />
+    <section className="dark-section">
+      <Container fluid>
+        <h2 className="section-heading colored-text">Testimonials</h2>
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className = "d-block w-responsive text-center mx-auto p-3 mt-2"
-          src={PiFarmLogo2}
-          alt="Third slide"
-        />
+        <div
+          className={css`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto;
+            max-width: 600px;
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    //       </Row>
-    //   </Container>
-   
+            p {
+              text-align: center;
+              margin-bottom: 20px;
+              color: white;
+            }
+
+            em {
+              text-align: center;
+              margin-bottom: 20px;
+              color: white;
+              font-size:0.8rem;
+            }
+          `}
+        >
+          <p className="white-text">{current.testimonial}</p>
+          <em className="white-text">
+            {current.name}, {current.occupation}
+          </em>
+
+          <div
+            className={css`
+              display: flex;
+
+              span {
+                height: 20px;
+                width: 20px;
+                margin: 0 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              }
+
+              span::before {
+                content: "";
+                height: 8px;
+                width: 8px;
+                background-color: #8f8f8f;
+                border-radius: 50%;
+                transition:background-color 0.3s ease;
+              }
+
+              span:hover::before{
+                background-color:#ffd31d;
+              }
+
+              span[data-testimonial="${active}"]::before{
+                background-color:#ffd31d;
+              }
+            `}
+          >
+            {Object.keys(testimonials).map((index) => (
+              <span
+                onClick={(event) => handleSetClick(event)}
+                data-testimonial={index}
+                key={index}
+              />
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }
+
+export default Testimonials;

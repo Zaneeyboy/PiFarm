@@ -35,7 +35,7 @@ const PricingCard = props => {
                 lName: "",
                 email: "",
                 package: ""
-            }
+            };
         });
     }
 
@@ -63,11 +63,15 @@ const PricingCard = props => {
                     <Card.Body>
                         <Card.Header><h3 className="">{props.title}</h3></Card.Header>
                         <Card.Title><h2 className="price-text">{props.price}</h2></Card.Title>
-                        <Card.Text className="card-text">
+                        
                             {props.features.map(feature => {
-                                return <p key={feature}>{feature}</p>
+                                return (
+                                    <Card.Text key={feature} className = "card-text" >
+                                        {feature}
+                                    </Card.Text>
+                                );
                             })}
-                        </Card.Text>
+                        
                         <button className="btn btn-primary" onClick={handleShow}
                                 type="button">Sign Up</button>
                     </Card.Body>

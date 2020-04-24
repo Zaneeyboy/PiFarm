@@ -12,7 +12,7 @@ const Pricing = () => {
       <Row>
         {PricingInfo.map(item=>{
           return(
-            <Col lg={4}>
+            <Col key={item.key} lg={4}>
               <PricingCard className="pricing-column"
               key={item.key}
               title={item.title}

@@ -43,7 +43,7 @@ ul{
 }
 
 .section-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.5;
 }
 
@@ -60,7 +60,11 @@ ul{
     color:#ffd31d;
 }
 
-.active{
+.active-link{
+    color:#ffd31d;
+}
+
+.nav-link:hover{
     color:#ffd31d;
 }
 
@@ -88,7 +92,7 @@ ul{
 
 /* Features */
 .feature-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .feature-box {
@@ -106,6 +110,15 @@ ul{
     color: #b80d57;
 }
 
+/* Testimonials */
+.colored-text{
+    color:#ffd31d;
+}
+
+.white-text{
+    color:white;
+}
+
 /* Pricing */
 .card{
  margin:1%;
@@ -116,7 +129,7 @@ ul{
 } */
 
 .price-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.5;
 }
 
@@ -125,7 +138,7 @@ ul{
 }
 
 .fluid-container{
-    margin-top:7%;
+    margin-top:4%;
     margin-bottom:7%;
 }
 
