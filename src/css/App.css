@@ -78,6 +78,15 @@ ul{
     font-family: "Montserrat-Light";
 }
 
+.dropdown-toggle{
+    padding:0px;
+}
+
+.dropdown{
+    padding-left:0px;
+    padding-right: 0px;
+}
+
 /* About */
 .project-title{
     font-family: "Ubuntu";

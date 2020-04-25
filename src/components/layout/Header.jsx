@@ -8,35 +8,42 @@ export default function Header() {
   const brandStyle={
     fontWeight:'bold',
     color:'#ffd31d',
-  }
+  };
 
     return (
       <header>
-        <Navbar Navbar className = " sticky-top navbar dark-section"
+        <Navbar className = " sticky-top navbar dark-section"
         collapseOnSelect expand = "md"
         bg = "dark"
         variant = "dark" >
-          <Navbar.Brand href=""> 
+          {/* <Navbar.Brand href="">  */}
             <Link style={brandStyle} to="/PiFarm" className="navbar-brand"> PiFarm</Link>
-          </Navbar.Brand>
+          {/* </Navbar.Brand> */}
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="">
+              {/* <Nav.Link href=""> */}
                 <NavLink to="PiFarm" className="nav-item nav-link" activeClassName="active" exact={true}>
                   Home
                 </NavLink>
-            </Nav.Link>
+            {/* </Nav.Link> */}
 
-            <Nav.Link href="">
+            {/* <Nav.Link href=""> */}
                 <NavLink to="Dashboard" className="nav-item nav-link" activeClassName="active">
                   Dashboard
                 </NavLink>
-            </Nav.Link>
+            {/* </Nav.Link> */}
 
-            <NavDropdown title="Account" id="collasible-nav-dropdown" className="nav-item nav-link">
-              <NavDropdown.Item href=""><Link to="Login" className="nav-item" >Login</Link></NavDropdown.Item>
-              <NavDropdown.Item href=""><Link to="Logout" className="nav-item">Logout</Link></NavDropdown.Item>
+            <NavDropdown title = "Account" style={{paddingTop:'0px',paddingBottom:'0px'}}
+            id = "collasible-nav-dropdown"
+            className = "nav-item nav-link" >
+              {/* <NavDropdown.Item href=""> */}
+              <Link to="Login" className="dropdown-item" >Login</Link>
+              <div class="dropdown-divider"></div>
+              {/* </NavDropdown.Item> */}
+              {/* <NavDropdown.Item href=""> */}
+              <Link to="Logout" className="dropdown-item">Logout</Link>
+              {/* </NavDropdown.Item> */}
             </NavDropdown>
 
             </Nav>

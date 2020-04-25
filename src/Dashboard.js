@@ -1,9 +1,10 @@
 import React from "react";
+import System from "./components/Dashboard/System";
 
 const Dashboard=()=>{
     return (
         <div>
-        wood
+        <System/>
         </div>
     );
 }
