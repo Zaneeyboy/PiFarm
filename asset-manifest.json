@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/PiFarm/static/css/main.41da645a.chunk.css",
-    "main.js": "/PiFarm/static/js/main.836e4672.chunk.js",
-    "main.js.map": "/PiFarm/static/js/main.836e4672.chunk.js.map",
+    "main.css": "/PiFarm/static/css/main.80f56a0d.chunk.css",
+    "main.js": "/PiFarm/static/js/main.c3877027.chunk.js",
+    "main.js.map": "/PiFarm/static/js/main.c3877027.chunk.js.map",
     "runtime-main.js": "/PiFarm/static/js/runtime-main.382962dd.js",
     "runtime-main.js.map": "/PiFarm/static/js/runtime-main.382962dd.js.map",
     "static/css/2.69121389.chunk.css": "/PiFarm/static/css/2.69121389.chunk.css",
-    "static/js/2.e1fc21cd.chunk.js": "/PiFarm/static/js/2.e1fc21cd.chunk.js",
-    "static/js/2.e1fc21cd.chunk.js.map": "/PiFarm/static/js/2.e1fc21cd.chunk.js.map",
+    "static/js/2.cff34f58.chunk.js": "/PiFarm/static/js/2.cff34f58.chunk.js",
+    "static/js/2.cff34f58.chunk.js.map": "/PiFarm/static/js/2.cff34f58.chunk.js.map",
     "index.html": "/PiFarm/index.html",
-    "precache-manifest.e2181c805510854bc69a7c25d97fb040.js": "/PiFarm/precache-manifest.e2181c805510854bc69a7c25d97fb040.js",
+    "precache-manifest.a1f149b29091d847165f8092a8654fc5.js": "/PiFarm/precache-manifest.a1f149b29091d847165f8092a8654fc5.js",
     "service-worker.js": "/PiFarm/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/PiFarm/static/css/2.69121389.chunk.css.map",
-    "static/css/main.41da645a.chunk.css.map": "/PiFarm/static/css/main.41da645a.chunk.css.map",
-    "static/js/2.e1fc21cd.chunk.js.LICENSE.txt": "/PiFarm/static/js/2.e1fc21cd.chunk.js.LICENSE.txt",
-    "static/media/Pifarm.png": "/PiFarm/static/media/Pifarm.ab85bf5e.png"
+    "static/css/main.80f56a0d.chunk.css.map": "/PiFarm/static/css/main.80f56a0d.chunk.css.map",
+    "static/js/2.cff34f58.chunk.js.LICENSE.txt": "/PiFarm/static/js/2.cff34f58.chunk.js.LICENSE.txt",
+    "static/media/Pifarm.png": "/PiFarm/static/media/Pifarm.ab85bf5e.png",
+    "static/media/Soil Moisture.png": "/PiFarm/static/media/Soil Moisture.88b7af05.png",
+    "static/media/Turbidity.png": "/PiFarm/static/media/Turbidity.c7955fe3.png",
+    "static/media/phScale.png": "/PiFarm/static/media/phScale.8b312962.png"
   },
   "entrypoints": [
     "static/js/runtime-main.382962dd.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.e1fc21cd.chunk.js",
-    "static/css/main.41da645a.chunk.css",
-    "static/js/main.836e4672.chunk.js"
+    "static/js/2.cff34f58.chunk.js",
+    "static/css/main.80f56a0d.chunk.css",
+    "static/js/main.c3877027.chunk.js"
   ]
 }

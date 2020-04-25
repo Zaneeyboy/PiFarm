@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PiFarm/precache-manifest.e2181c805510854bc69a7c25d97fb040.js"
+  "/PiFarm/precache-manifest.a1f149b29091d847165f8092a8654fc5.js"
 );
 
 self.addEventListener('message', (event) => {
