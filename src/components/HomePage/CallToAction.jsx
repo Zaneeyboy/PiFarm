@@ -11,10 +11,11 @@ export default function CallToAction() {
           Contact us for a free consultation on Pifarm packages today!
         </h3>
         <ul>
-          <li className="btn btn-outline-dark contact-button">
+          <li style={{fontSize:"1.2rem"}} className="btn btn-outline-dark contact-button">
             <MdContactMail size="1.5rem" /> Email : bigtwigs@gmail.com
           </li>
-          <li className="btn btn-primary contact-button">
+          <li style={{fontSize: "1.2rem"}}
+          className = "btn btn-primary contact-button" >
             <FiPhoneOutgoing size="1.5rem" /> Tel : 1-868-123-4567
           </li>
         </ul>

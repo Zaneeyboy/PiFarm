@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {Container} from "react-bootstrap";
 import testimonials from "./TestimonialData";
-import {css,cx} from "emotion";
+import {css} from "emotion";
 
 const Testimonials=()=>{
 
@@ -31,13 +31,14 @@ const Testimonials=()=>{
               text-align: center;
               margin-bottom: 20px;
               color: white;
+              font-size:1.5rem;
             }
 
             em {
               text-align: center;
               margin-bottom: 20px;
               color: white;
-              font-size:0.8rem;
+              font-size:1.2rem;
             }
           `}
         >
