@@ -16,17 +16,35 @@ export default function Ph() {
     const {currentUser} = useContext(AuthContext);
     const uid=currentUser.uid;
 
-    const phArray=[];
+     const phArray=[];
+    // useEffect(()=>{
+    //     firestore.collection("users").doc(uid).collection("systems").doc("flames").collection("ph").onSnapshot(snapshot=>{
+    //         //populate ph value array
+    //         let changes = snapshot.docChanges();
+    //         changes.forEach(change=>{
+    //             if (change.type == "added") {//gets change type
+    //                 phArray.push(change.doc.data().value);
+    //             }
+    //         });
+    //         setpH(phArray[phArray.length-1]);
+
+
+    //         //pull data in order of timestamp
+    //         //push data in array in that order
+    //         //get latest value and set ph to that value
+    //         //render content in modal according to the value set
+    //     });
+    // },[]);
+
     useEffect(()=>{
-        firestore.collection("users").doc(uid).collection("systems").doc("flames").collection("ph").onSnapshot(snapshot=>{
-            //populate ph value array
-            let changes = snapshot.docChanges();
+        firestore.collection("users").doc(uid).collection("ph").onSnapshot(snapshot=>{
+            let changes=snapshot.docChanges();
             changes.forEach(change=>{
-                if (change.type == "added") {//gets change type
+                if(change.type==="added"){
                     phArray.push(change.doc.data().value);
                 }
             });
-            setpH(phArray[phArray.length-1]);
+            setpH(phArray[phArray.length - 1]);
 
 
             //pull data in order of timestamp
@@ -38,10 +56,10 @@ export default function Ph() {
 
     const [suggestion,setSuggestion]=useState("");
     const suggestionArray={
-        0:"acidic",
-        1:"alkaline",
-        2:"neutral",
-        3:"The pH level is measured on a scale from 1 to 14, with the neutral point being 7. Everything above neutral is alkaline and everything below is acidic. In hydroponics, when growing several different types of herbs or vegetables in one container, you will probably do best in the range of 5.6 to 6.5, because it is within this range that nutrients are most available to plants. "
+        0:"The pH of your nutrient solution is too acidic. Apply pH-Up solution to your nutrient solution immediately to prevent wastage of nutrients when deployed to your plants.",
+        1:"The pH of your nutrient solution is too basic. Apply pH-Down solution to your nutrient solution immediately to prevent trace elements from being wasted during nutrient deployment.",
+        2:"The pH of your nutrient solution is acceptable.",
+        3:""
     };
 
     const comparepHValues=()=>{
@@ -83,7 +101,7 @@ export default function Ph() {
                 <button className="btn btn-outline-dark" onClick={handleShow} type="button">More on pH values</button>
                 <h3 className="" style={{paddingTop:"4%",paddingBottom:"2%"}}>Current PH Reading: {ph}</h3>
                 <p>{suggestion}</p>
-                <button className="btn btn-dark">Check Ph level</button>
+                {/* <button className="btn btn-dark">Check Ph level</button> */}
 
                 
                 

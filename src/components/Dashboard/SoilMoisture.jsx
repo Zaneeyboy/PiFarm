@@ -17,18 +17,34 @@ export default function SoilMoisture() {
     const uid=currentUser.uid;
 
     const moistureArray=[];
+    // useEffect(()=>{
+    //     firestore.collection("users").doc(uid).collection("systems").doc("flames").collection("moisture").onSnapshot(snapshot=>{
+    //         //populate ph value array
+    //         let changes = snapshot.docChanges();
+    //         changes.forEach(change=>{
+    //             if (change.type == "added") {//gets change type
+    //                 moistureArray.push(change.doc.data().value);
+    //             }
+    //         });
+    //         setMoisture(moistureArray[moistureArray.length-1]);
+
+
+    //         //pull data in order of timestamp
+    //         //push data in array in that order
+    //         //get latest value and set ph to that value
+    //         //render content in modal according to the value set
+    //     });
+    // },[]);
+
     useEffect(()=>{
-        firestore.collection("users").doc(uid).collection("systems").doc("flames").collection("moisture").onSnapshot(snapshot=>{
-            //populate ph value array
+        firestore.collection("users").doc(uid).collection("moisture").onSnapshot(snapshot=>{
             let changes = snapshot.docChanges();
             changes.forEach(change=>{
-                if (change.type == "added") {//gets change type
+                if(change.type==="added"){
                     moistureArray.push(change.doc.data().value);
                 }
             });
-            setMoisture(moistureArray[moistureArray.length-1]);
-
-
+            setMoisture(moistureArray[moistureArray.length - 1]);
             //pull data in order of timestamp
             //push data in array in that order
             //get latest value and set ph to that value
@@ -38,9 +54,9 @@ export default function SoilMoisture() {
 
     const [suggestion,setSuggestion]=useState("");
     const suggestionArray={
-        0:"high moisture level",
-        1:"acceptable moisture level",
-        2:"dry af",
+        0:"The moisture level in your growing medium is too high. This can lead to root rot if left untreated. Refrain from deploying nutrients to your plants and allow the growing medium to filter excess moisture out of the system.",
+        1:"Your moisture level is acceptable",
+        2:"The growing medium has an extremely low moisture level. This can lead to stunted growth and high heat can burn your plants at this time. Nutrients should be deployed as soon as possible.",
         3: "The soil mositure level here refers to the moisture level of the growing medium in which your plants thrive in your hydroponic system.This measurement seeks to assist with deploying nutrients at the right time to your plants so that they remain neither underfed nor overfed.As a result, this measurements will give a good indication of when you should feed your plants during the course of the day."
     };
 
@@ -78,7 +94,7 @@ export default function SoilMoisture() {
                         <h3 className="" style={{paddingTop:"4%",paddingBottom:"2%"}}>Current Soil Moisture Reading: {moisture}% saturated</h3>
                         
                         <p>{suggestion}</p>
-                        <button className="btn btn-dark">Check Soil Moisture Level</button>
+                        {/* <button className="btn btn-dark">Check Soil Moisture Level</button> */}
 
                         
                         {/* <Pump moisturelevel={soilMoisture}/> */}

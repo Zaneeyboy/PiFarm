@@ -18,30 +18,43 @@ export default function TurbiditySensor() {
     const uid=currentUser.uid;
 
     const ppmArray=[];
+    // useEffect(()=>{
+    //     firestore.collection("users").doc(uid).collection("systems").doc("flames").collection("ppm").onSnapshot(snapshot=>{
+    //         //populate ph value array
+    //         let changes = snapshot.docChanges();
+    //         changes.forEach(change=>{
+    //             if (change.type == "added") {//gets change type
+    //                 ppmArray.push(change.doc.data().value);
+    //             }
+    //         });
+    //         setPpm(ppmArray[ppmArray.length-1]);
+
+
+            
+    //     });
+    // },[]);
+
     useEffect(()=>{
-        firestore.collection("users").doc(uid).collection("systems").doc("flames").collection("ppm").onSnapshot(snapshot=>{
-            //populate ph value array
+        firestore.collection("users").doc(uid).collection("ppm").onSnapshot(snapshot=>{
             let changes = snapshot.docChanges();
             changes.forEach(change=>{
-                if (change.type == "added") {//gets change type
+                if(change.type==="added"){
                     ppmArray.push(change.doc.data().value);
                 }
             });
-            setPpm(ppmArray[ppmArray.length-1]);
-
-
+            setPpm(ppmArray[ppmArray.length - 1]);
             //pull data in order of timestamp
             //push data in array in that order
             //get latest value and set ph to that value
             //render content in modal according to the value set
         });
-    },[]);
+    });
 
     const [suggestion,setSuggestion]=useState("");
     const suggestionArray={
-        0:"too concentrated",
-        1:"too diluted",
-        2:"neutral",
+        0:"Your PPM level in the reservoir is too concentrated. This can lead to nurtient burn in your plants. Please add more water to dilute your reservoir's concentration.",
+        1:"Your PPM level is too low. This can lead to stunted growth in your plants. Follow the instructions on your NPK mix and add the appropriate amount of NPK to your reservoir to raise your PPM value to the desired level.",
+        2:"Your PPM level is acceptable ",
         3: "Turbidity is an optical determination of water clarity. It is determined by the amount  of light particles in the water column.The more particles that are present, the more light is refracted in the water column."
     };
 
@@ -88,7 +101,7 @@ export default function TurbiditySensor() {
                         {suggestion}
                     </p>
 
-                    <button className="btn btn-warning" style={{backgroundColor:'#ffd31d'}}>Check PPM Level</button>
+                    {/* <button className="btn btn-warning" style={{backgroundColor:'#ffd31d'}}>Check PPM Level</button> */}
 
                     
                                 
